@@ -1,0 +1,25 @@
+# ESP8266 WiFi Connection 🌐
+
+## Overview  
+This project demonstrates how to connect an ESP8266 to a *WiFi network* and print its *IP address* via the Serial Monitor.
+
+## Features  
+✅ Connects ESP8266 to a WiFi network  
+✅ Prints *IP address* on successful connection  
+✅ Serial monitoring for connection status  
+
+## Hardware Requirements  
+- *ESP8266* (NodeMCU, Wemos D1 Mini, etc.)  
+- *Arduino IDE* with ESP8266 board installed  
+
+## Installation & Usage  
+1. Open wifi_connect.ino in Arduino IDE.  
+2. Replace ssid and password with your WiFi credentials.  
+3. Upload the code to the ESP8266.  
+4. Open the Serial Monitor at *115200 baud*.  
+5. The ESP8266 will print its *IP Address* when connected.  
+
+## Code Explanation  
+- The ESP8266 attempts to *connect* to a WiFi network.  
+- If successful, it prints the *local IP address* assigned by the router.  
+- If disconnected, it retries until it connects.  
