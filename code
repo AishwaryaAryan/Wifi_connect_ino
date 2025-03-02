@@ -1,0 +1,32 @@
+#include <ESP8266WiFi.h>
+
+// Replace with your WiFi credentials
+const char* ssid = "Realme P1";       // WiFi SSID
+const char* password = "11111111"; // WiFi Password
+
+void setup() {
+  Serial.begin(115200);
+  Serial.println();
+
+  WiFi.begin(ssid, password);  // Connect to WiFi
+
+  Serial.print("Connecting to WiFi");
+  while (WiFi.status() != WL_CONNECTED) { 
+    delay(500);
+    Serial.print(".");
+  }
+
+  Serial.println("\nConnected to WiFi!");
+  Serial.print("IP Address: ");
+  Serial.println(WiFi.localIP());  // Print ESP8266's local IP
+}
+
+void loop() {
+  // Keep checking WiFi status
+  if (WiFi.status() != WL_CONNECTED) {
+    Serial.println("WiFi Disconnected!");
+  } else {
+    Serial.println("WiFi Connected!");
+  }
+  delay(5000);
+}
